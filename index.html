@@ -7,16 +7,19 @@
 </head>
 <body>
 <script>
-  // PC에서 열 오픈채팅
-  const PC = "https://open.kakao.com/o/gE0VBx3h";
+  const BOT_DEEPLINK =
+    "kakaotalk://inappbrowser?url=" +
+    encodeURIComponent(
+      "kakaoplus://plusfriend/talk/bot/@BOT_ID/hacking"
+    );
 
-  // 폰에서 열 채널 채팅
-  const MOBILE = "https://pf.kakao.com/_QHdgn/chat";
+  const OPENCHAT = "https://open.kakao.com/o/gE0VBx3h";
 
-  const ua = navigator.userAgent || "";
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+  location.href = BOT_DEEPLINK;
 
-  location.replace(isMobile ? MOBILE : PC);
+  setTimeout(() => {
+    location.replace(OPENCHAT);
+  }, 1000);
 </script>
 </body>
 </html>
