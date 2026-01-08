@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting...</title>
+</head>
+<body>
+<script>
+  // PC에서 열 오픈채팅
+  const PC = "https://open.kakao.com/o/gE0VBx3h";
+
+  // 폰에서 열 채널 채팅
+  const MOBILE = "https://pf.kakao.com/_QHdgn/chat";
+
+  const ua = navigator.userAgent || "";
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+
+  location.replace(isMobile ? MOBILE : PC);
+</script>
+</body>
+</html>
